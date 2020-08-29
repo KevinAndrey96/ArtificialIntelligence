@@ -1,11 +1,11 @@
 #!/usr/bin/python
 
 # Head ends here
-def posi(n,grid,c, b_pos):
+def posi(n,grid,c):
 
     pos=[]
-    for i in range(b_pos[0],n):
-        for j in range(b_pos[1],n):
+    for i in range(n):
+        for j in range(n):
             if(grid[i][j]==c):
                 pos.append(i)
                 pos.append(j)
@@ -17,7 +17,7 @@ def next_move(posr, posc, board):
     b_pos.append(posr)
     b_pos.append(posc)
 
-    d_pos=posi(5, board, "d",b_pos)
+    d_pos=posi(5, board, "d")
     
     next=""
     if(b_pos[0]==d_pos[0] and b_pos[1]==d_pos[1]):
